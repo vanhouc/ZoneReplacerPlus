@@ -54,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="IXDocProvider.cs" />
+    <Compile Include="IXMLService.cs" />
+    <Compile Include="XMLLoader.cs" />
+    <Compile Include="XMLService.cs" />
     <Compile Include="Zone.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
