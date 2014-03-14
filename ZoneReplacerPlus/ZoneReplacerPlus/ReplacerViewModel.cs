@@ -8,8 +8,27 @@ using ZoneReplacerPlus;
 
 namespace ZoneReplacerPlus
 {
-    class ReplacerViewModel
+    public class ReplacerViewModel
     {
-        ObservableCollection<Zone>
+        private ObservableCollection<Zone> _zones;
+
+        public ObservableCollection<Zone> Zones
+        {
+            get { return _zones; }
+            set { _zones = value; }
+        }
+
+        private Zone _selectedZone;
+
+        public Zone SelectedZone
+        {
+            get { return _selectedZone; }
+            set { _selectedZone = value; }
+        }
+        public Zones[] LoadZones(string path)
+        {
+            IXMLService 
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ZoneReplacerPlus
 {
-    internal class Zone
+    public class Zone
     {
         private string _borderStyle;
         private string _columnCount;

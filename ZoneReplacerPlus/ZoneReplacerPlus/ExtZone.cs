@@ -1,6 +1,6 @@
 ﻿namespace ZoneReplacerPlus
 {
-    internal class ExtZone : Zone
+    public class ExtZone : Zone
     {
         private string _click;
         private string _doubleClick;

@@ -1,7 +1,16 @@
 ﻿<Window x:Class="ZoneReplacerPlus.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ZoneReplacerPlus"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <local:ReplacerViewModel x:Key="viewModel"/>
+    </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid ItemsSource="{Binding Source={StaticResource viewModel}, Path=Zones}"/>
     </Grid>
 </Window>
