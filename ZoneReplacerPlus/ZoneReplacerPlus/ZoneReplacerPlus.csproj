@@ -60,6 +60,7 @@
     <Compile Include="XMLLoader.cs" />
     <Compile Include="XMLService.cs" />
     <Compile Include="Zone.cs" />
+    <Compile Include="ZoneService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

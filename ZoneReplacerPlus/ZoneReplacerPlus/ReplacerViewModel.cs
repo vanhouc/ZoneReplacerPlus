@@ -27,8 +27,8 @@ namespace ZoneReplacerPlus
         }
         public Zones[] LoadZones(string path)
         {
-            IXMLService 
-        }
+            IXMLService xmlService = new XMLService(new XMLLoader(path));
 
+        }
     }
 }
