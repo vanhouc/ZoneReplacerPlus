@@ -19,7 +19,13 @@ namespace ZoneReplacerPlus
             if (this.provider.Doc != null)
                 doc = this.provider.Doc;
         }
+        public void UpdateDoc(Zone[] zones)
+        {
+            foreach (ExtZone z in zones.OfType<ExtZone>())
+            {
 
+            }
+        }
         /// <summary>
         /// Returns value of the specified child for all children of an XML element
         /// </summary>

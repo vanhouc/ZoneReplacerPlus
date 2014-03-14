@@ -56,6 +56,7 @@
     </ApplicationDefinition>
     <Compile Include="IXDocProvider.cs" />
     <Compile Include="IXMLService.cs" />
+    <Compile Include="ObservableObject.cs" />
     <Compile Include="ReplacerViewModel.cs" />
     <Compile Include="XMLLoader.cs" />
     <Compile Include="XMLService.cs" />

@@ -1,4 +1,5 @@
-﻿namespace ZoneReplacerPlus
+﻿using System.Xml.Linq;
+namespace ZoneReplacerPlus
 {
     public class Zone
     {
@@ -28,6 +29,18 @@
         {
             BorderStyle = borderStyle;
         }
+        private XElement zoneXML;
+
+        public XElement ZoneXML
+        {
+            get { return zoneXML; }
+            set 
+            { 
+                zoneXML = value;
+                RaisePropertyChanged
+            }
+        }
+        
 
         public string BorderStyle
         {
