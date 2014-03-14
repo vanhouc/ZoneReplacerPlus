@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Linq;
 
-namespace SystemCheckerPlus
+namespace ZoneReplacerPlus
 {
     internal class XMLLoader : IXDocProvider
     {

@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Xml.Linq;
 
-namespace SystemCheckerPlus
+namespace ZoneReplacerPlus
 {
-    public class XMLService : SystemCheckerPlus.IXMLService
+    public class XMLService : ZoneReplacerPlus.IXMLService
     {
         private XDocument doc;
         private IXDocProvider provider;

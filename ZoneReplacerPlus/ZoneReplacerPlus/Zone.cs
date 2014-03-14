@@ -1,4 +1,4 @@
-﻿namespace ZoneReplacer
+﻿namespace ZoneReplacerPlus
 {
     internal class Zone
     {
