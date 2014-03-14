@@ -21,29 +21,6 @@ namespace SystemCheckerPlus
         }
 
         /// <summary>
-        /// Creates a list of elements from a list of XML elements
-        /// </summary>
-        /// <param name="elementChain">Logical heirarchy with the name of the desired element being the last in the chain</param>
-        /// <returns>array of application</returns>
-        public Application[] GetAppData(string[] elementChain)
-        {
-            IEnumerable<XElement> scope = doc.Descendants();
-            for (int i = 0; i < elementChain.Length - 1; i++)
-            {
-                scope = scope.Single(x => x.Name == elementChain[i]).Descendants();
-            }
-            Application[] appList = (from app in scope
-                                     where app.Name == elementChain[elementChain.Length - 1]
-                                     select new Application()
-                                     {
-                                         DisplayName = app.Element("DisplayName").Value,
-                                         AppFolder = app.Element("Folder").Value,
-                                         BUPFiles = app.Element("BUPFiles").Elements().Select(x => x.Value).ToArray(),
-                                     }).ToArray();
-            return appList;
-        }
-
-        /// <summary>
         /// Returns value of the specified child for all children of an XML element
         /// </summary>
         /// <param name="elementChain">Logical heirarchy with the desired element being the last in the chain</param>
