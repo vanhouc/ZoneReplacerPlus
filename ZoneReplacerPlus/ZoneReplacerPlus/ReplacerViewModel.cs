@@ -25,10 +25,5 @@ namespace ZoneReplacerPlus
             get { return _selectedZone; }
             set { _selectedZone = value; }
         }
-        public Zones[] LoadZones(string path)
-        {
-            IXMLService xmlService = new XMLService(new XMLLoader(path));
-
-        }
     }
 }

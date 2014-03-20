@@ -9,9 +9,9 @@ namespace ZoneReplacerPlus
 {
     public static class ZoneService
     {
-        public static Zone[] LoadZones(IXMLService xmlService)
-        {
-            xmlService.GetElements("Floorplan", "Zones");
-        }
+        //public static Zone[] LoadZones(IXMLService xmlService)
+        //{
+        //    xmlService.GetElements(new string[]{"Floorplan", "Zones"});
+        //}
     }
 }

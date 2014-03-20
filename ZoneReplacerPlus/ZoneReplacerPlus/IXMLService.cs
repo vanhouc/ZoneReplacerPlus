@@ -5,8 +5,8 @@ namespace ZoneReplacerPlus
     {
         string[] GetChildValues(string[] elementChain, string childProperty);
 
-        string GetElement(string[] elementChain);
+        XElement GetElement(string[] elementChain);
 
-        XElement[] GetElements(string[] elementChain);
+        //XElement[] GetElements(string[] elementChain);
     }
 }
