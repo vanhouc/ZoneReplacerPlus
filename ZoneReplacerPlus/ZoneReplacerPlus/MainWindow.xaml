@@ -11,6 +11,15 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid ItemsSource="{Binding Source={StaticResource viewModel}, Path=Zones}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="Correct Columns"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Source={StaticResource viewModel}, Path=Zones}"/>
     </Grid>
 </Window>
