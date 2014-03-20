@@ -1,7 +1,9 @@
 ﻿using System.Xml.Linq;
+using System.Linq;
+using System;
 namespace ZoneReplacerPlus
 {
-    public class Zone
+    public class Zone : ObservableObject
     {
         private string _borderStyle;
         private string _columnCount;
@@ -37,7 +39,7 @@ namespace ZoneReplacerPlus
             set 
             { 
                 zoneXML = value;
-                RaisePropertyChanged
+                RaisePropertyChanged("ZoneXML");
             }
         }
         
@@ -45,43 +47,83 @@ namespace ZoneReplacerPlus
         public string BorderStyle
         {
             get { return _borderStyle; }
-            set { _borderStyle = value; }
+            set 
+            { 
+                _borderStyle = value;
+                ZoneXML.Element("BorderStyle").Value = value;
+                RaisePropertyChanged("BorderStyle");
+            }
         }
 
         public string ColumnCount
         {
             get { return _columnCount; }
-            set { _columnCount = value; }
+            set 
+            {
+                _columnCount = value;
+                ZoneXML.Element("ColumnCount").Value = value;
+                RaisePropertyChanged("ColumnCount");
+            }
         }
 
         public string Height
         {
             get { return _height; }
-            set { _height = value; }
+            set 
+            {
+                _height = value;
+                ZoneXML.Element("Height").Value = value;
+                RaisePropertyChanged("Height");
+            }
         }
 
         public string Left
         {
             get { return _left; }
-            set { _left = value; }
+            set 
+            {
+                _left = value;
+                ZoneXML.Element("Left").Value = value;
+                RaisePropertyChanged("Left");
+            }
         }
 
         public string[] Receivers
         {
             get { return _receivers; }
-            set { _receivers = value; }
+            set 
+            {
+                _receivers = value;
+                string receiverString = String.Empty;
+                foreach (string receiver in value)
+                {
+                    receiverString += receiver + ",";
+                }
+                ZoneXML.Element("Receivers").Value = receiverString;
+                RaisePropertyChanged("Receivers");
+            }
         }
 
         public string Top
         {
             get { return _top; }
-            set { _top = value; }
+            set 
+            {
+                _top = value;
+                ZoneXML.Element("Top").Value = value;
+                RaisePropertyChanged("Top");
+            }
         }
 
         public string Width
         {
             get { return _width; }
-            set { _width = value; }
+            set 
+            { 
+                _width = value;
+                ZoneXML.Element("Width").Value = value;
+                RaisePropertyChanged("Top");
+            }
         }
     }
 }

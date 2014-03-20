@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ZoneReplacerPlus
 {
@@ -10,7 +11,7 @@ namespace ZoneReplacerPlus
     {
         public static Zone[] LoadZones(IXMLService xmlService)
         {
-
+            xmlService.GetElements("Floorplan", "Zones");
         }
     }
 }

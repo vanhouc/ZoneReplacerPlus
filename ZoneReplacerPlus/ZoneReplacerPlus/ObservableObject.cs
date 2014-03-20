@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace SystemCheckerPlus
+namespace ZoneReplacerPlus
 {
     public class ObservableObject : INotifyPropertyChanged
     {

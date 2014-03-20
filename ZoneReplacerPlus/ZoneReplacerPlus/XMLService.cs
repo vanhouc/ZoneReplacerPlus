@@ -19,13 +19,6 @@ namespace ZoneReplacerPlus
             if (this.provider.Doc != null)
                 doc = this.provider.Doc;
         }
-        public void UpdateDoc(Zone[] zones)
-        {
-            foreach (ExtZone z in zones.OfType<ExtZone>())
-            {
-
-            }
-        }
         /// <summary>
         /// Returns value of the specified child for all children of an XML element
         /// </summary>
@@ -47,14 +40,23 @@ namespace ZoneReplacerPlus
         /// </summary>
         /// <param name="elementChain">Logical heirarchy with the desired element being the last in the chain</param>
         /// <returns>array of the specified element</returns>
-        public string GetElementValue(string[] elementChain)
+        public XElement GetElement(string[] elementChain)
         {
             IEnumerable<XElement> scope = doc.Descendants();
             for (int i = 0; i < elementChain.Length - 1; i++)
             {
                 scope = scope.Single(x => x.Name == elementChain[i]).Descendants();
             }
-            return scope.Single(x => x.Name == elementChain[elementChain.Length - 1]).Value;
+            return scope.Single(x => x.Name == elementChain[elementChain.Length - 1]);
+        }
+        public XElement[] GetElements(string[] elementChain)
+        {
+            IEnumerable<XElement> scope = doc.Descendants();
+            for (int i = 0; i < elementChain.Length - 1; i++)
+            {
+                scope = scope.Single(x => x.Name == elementChain[i]).Descendants();
+            }
+            return scope.Elements().ToArray();
         }
     }
 }
